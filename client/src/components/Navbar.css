@@ -1,0 +1,105 @@
+/* ============================================
+   NAVBAR COMPONENT STYLES
+   ============================================ */
+
+.navbar {
+  height: var(--navbar-height);
+  background-color: var(--color-dark-gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-8);
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.navbar-spacer {
+  flex: 1;
+}
+
+.navbar-user-section {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.navbar-user-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  background-color: var(--color-gray);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+}
+
+.navbar-user-avatar {
+  width: 20px;
+  height: 20px;
+}
+
+.navbar-artist-badge {
+  font-size: var(--font-size-small);
+  background-color: var(--color-primary);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-full);
+  color: var(--color-black);
+  font-weight: 700;
+}
+
+.navbar-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--color-light-gray);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  padding: var(--spacing-2);
+  transition: all var(--transition-fast);
+}
+
+.navbar-logout-btn:hover {
+  color: var(--color-white);
+}
+
+.navbar-logout-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 var(--spacing-4);
+    height: calc(var(--navbar-height) - 8px);
+  }
+
+  .navbar-user-info {
+    padding: var(--spacing-2) var(--spacing-3);
+    gap: var(--spacing-1);
+  }
+
+  .navbar-user-info span:not(.navbar-artist-badge) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 var(--spacing-2);
+  }
+
+  .navbar-user-info {
+    background: none;
+    padding: 0;
+  }
+
+  .navbar-user-info span {
+    display: none;
+  }
+
+  .navbar-artist-badge {
+    display: none;
+  }
+}

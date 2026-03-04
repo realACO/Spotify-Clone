@@ -1,0 +1,28 @@
+/* ============================================
+   LAYOUT COMPONENT STYLES
+   ============================================ */
+
+.layout-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-dark-gray);
+}
+
+.layout-content-wrapper {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.layout-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-page-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-8);
+}
